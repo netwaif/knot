@@ -8,6 +8,25 @@
 - 기계 검사: `python3 scripts/lint.py` (의존성 0, ERROR 시 exit 1)
 - Obsidian으로 열면 그래프 뷰 사용 가능(선택, `.obsidian/`은 git 제외)
 
+## 설치 — 두 가지 용도
+
+**① 능동 스킬 플러그인 (Claude Code)** — "knot에 저장해줘"·"knot에서 찾아줘" 같은 자연어로
+save/ingest/query/lint를 쓰려면 이 저장소를 플러그인 마켓플레이스로 추가한다.
+
+1. `/plugins` → Add Marketplace → `netwaif/knot`
+2. 목록에서 `knot` 설치·활성화 → `/reload-plugins`
+3. vault가 아직 없으면 스킬이 setup(스캐폴드 받기 + 경로 등록)을 안내한다.
+
+**② vault 스캐폴드** — 지식을 담을 빈 vault가 필요하면 이 저장소를 그대로 받아 시작한다.
+
+```bash
+git clone --depth 1 https://github.com/netwaif/knot <vault 폴더>
+cd <vault 폴더> && rm -rf .git .claude-plugin plugins && git init
+mkdir -p ~/.config/knot && printf '%s\n' "<vault 폴더>" > ~/.config/knot/vault
+```
+
+플러그인 없이도 vault만으로 동작한다 — 아래 '사용'처럼 어떤 벤더 CLI로든 직접 호출하면 된다.
+
 ## 사용
 
 소스(md·txt)를 `inbox/`에 넣고, 아무 벤더 CLI로 한 줄:

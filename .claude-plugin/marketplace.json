@@ -1,0 +1,19 @@
+{
+  "name": "knot",
+  "description": "평문 마크다운 지식 그물(vault) — 여러 에이전트가 같은 기억을 공유. save/ingest/query/lint 능동 스킬",
+  "owner": {
+    "name": "netwaif",
+    "email": "netwaif@users.noreply.github.com"
+  },
+  "plugins": [
+    {
+      "name": "knot",
+      "description": "$KNOT_VAULT 지식 vault 능동 스킬 — save(자료를 inbox에 저장)·ingest(위키로 컴파일)·query(근거기반 질의)·lint(건강검진). vault 미설정이면 setup 안내.",
+      "version": "1.0.0",
+      "source": "./plugins/knot",
+      "author": {
+        "name": "netwaif"
+      }
+    }
+  ]
+}

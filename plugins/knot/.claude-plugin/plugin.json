@@ -1,0 +1,8 @@
+{
+  "name": "knot",
+  "version": "1.0.0",
+  "description": "평문 마크다운 지식 vault를 다루는 능동 스킬 — save(inbox 저장)·ingest(위키 컴파일)·query(근거기반 질의)·lint(건강검진). vault 정본(prompts/·scripts/)을 가리키는 얇은 shim, $KNOT_VAULT 게이트(미설정=setup 안내).",
+  "author": {
+    "name": "netwaif"
+  }
+}
